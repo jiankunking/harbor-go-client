@@ -41,9 +41,9 @@ func httpGet(c *Client, queryData url.Values, subPath string) ([]byte, *http.Res
 		return nil, resp, errDo
 	}
 	defer resp.Body.Close()
-	if resp.StatusCode != http.StatusOK {
-		return nil, resp, errwrap.WrapString("request status code exception : " + strconv.Itoa(resp.StatusCode))
-	}
+	//if resp.StatusCode != http.StatusOK {
+	//	return nil, resp, errwrap.WrapString("request status code exception : " + strconv.Itoa(resp.StatusCode))
+	//}
 
 	body, errRead := ioutil.ReadAll(resp.Body)
 	if errRead != nil {
