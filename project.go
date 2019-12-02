@@ -14,7 +14,7 @@ type Project struct {
 	Name         string            `json:"name"`
 	CreationTime time.Time         `json:"creation_time"`
 	UpdateTime   time.Time         `json:"update_time"`
-	Deleted      bool              `json:"deleted"`
+	Deleted      interface{}       `json:"deleted"`
 	OwnerName    string            `json:"owner_name"`
 	Togglable    bool              `json:"togglable"`
 	Role         int               `json:"current_user_role_id"`
